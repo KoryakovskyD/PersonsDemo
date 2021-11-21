@@ -1,3 +1,5 @@
+import java.util.Collection;
+
 public class RegularStudent extends AbstractStudent{
     private int course;
     private Stage stage;
@@ -31,5 +33,10 @@ public class RegularStudent extends AbstractStudent{
     @Override
     public String getDetailInfo() {
         return getSex().getPronoun() + " is " + course + "'th year " + stage + " student.";
+    }
+
+    public static void loadStudents(Collection<? super RegularStudent> students) {
+        students.add(new RegularStudent("Anna", Sex.FEMALE, "Computer science", 1, Stage.MASTER));
+        students.add(new RegularStudent("Anna", Sex.FEMALE, "Computer science", 1, Stage.MASTER));
     }
 }

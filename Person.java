@@ -56,4 +56,11 @@ public abstract class Person {
             System.out.println();
         }
     }
+
+    public static void printAll(Iterable<? extends Person> persons) {
+        for (Person p : persons) {
+            p.print();
+            System.out.println();
+        }
+    }
 }
